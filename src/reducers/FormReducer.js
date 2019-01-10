@@ -1,21 +1,5 @@
 const initialState = {
-  name: '',
-  email: '',
-  url: '',
-  password: '',
-  phone: '',
-  gender: '',
-  birthdate: '1999-04-05',
-  toggle: false,
-  slider: 50,
-  textArea: '',
-  resizable: '',
-  checkboxGroup: {
-    checkbox1: false,
-    checkbox2: false,
-    checkbox3: false,
-  },
-  radioButtonsGroup: 0
+  endPoint:""
 };
   
 export default (state = initialState, action) => {

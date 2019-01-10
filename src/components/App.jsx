@@ -1,15 +1,16 @@
 import React from 'react';
 import { Provider } from 'react-redux'
-import { App, View, Statusbar } from 'framework7-react';
+import { App, View } from 'framework7-react';
 
 import routes from '../routes';
 import { store, stateKernel } from '../store';
 
 // Framework7 parameters here
 const f7params = {
-  id: 'io.framework7.testapp', // App bundle ID
-  name: 'Framework7', // App name
-  theme: 'auto', // Automatic theme detection
+  id: 'scb.tablet', // App bundle ID
+  name: 'Tablet', // App name
+  theme: 'ios', // Automatic theme detection
+  version: "Phiên bản: alpha-20190108",
   // App routes
   routes,
   // App Framework7 Redux state kernel
@@ -24,15 +25,15 @@ const f7params = {
   },
   popup: {
     closeByBackdropClick: false
-  }
+  },
+  statusbarOverlay: false
 };
 
 export default () => {
   return (
     <Provider store={store}>
       <App params={f7params}>
-        <Statusbar />
-        <View id="main-view" url="/" main className="ios-edges"/>
+        <View id="main-view" url="/login/" main className="ios-edges"/>
       </App>
     </Provider>
   );

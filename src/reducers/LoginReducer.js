@@ -1,19 +1,17 @@
+let savedUserName = localStorage.getItem("userName");
+savedUserName = savedUserName? savedUserName:'';
+// var bytes  = CryptoJS.AES.decrypt(ciphertext, '183927');
+// var originalText = bytes.toString(CryptoJS.enc.Utf8);
 const initialState = {
-  username: '',
-  password: ''
+  username: savedUserName,
 };
 
 export default (state = initialState, action) => {
   switch (action.type) {
-    case 'USERNAME_UPDATED':
+    case 'USER_LOGGEDIN':
       return {
         ...state,
         username: action.payload
-      };
-    case 'PASSWORD_UPDATED':
-      return {
-        ...state,
-        password: action.payload
       };
     default:
       return state;

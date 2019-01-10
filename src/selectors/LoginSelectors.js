@@ -6,6 +6,10 @@ export const getPassword = (state) => {
   return state.login.password;
 };
 
+export const getValidation = (state) => {
+  return state.login.valid;
+};
+
 export const loginValid = (state) => {
-  return getPassword(state) === 'password!';
+  return getPassword(state) !== '' && getUsername !== '';
 };

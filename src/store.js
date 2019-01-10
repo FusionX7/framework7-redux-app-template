@@ -10,7 +10,7 @@ export const stateKernel = new Framework7StateKernel();
 export const store = createStore(
   combineReducers({
     framework7: framework7Reducer,
-    login: loginReducer,
+    userInfo: UserReducer,
     form: formReducer,
   }),
   applyMiddleware(thunk)
